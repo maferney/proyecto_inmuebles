@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'inmobiliaria.wsgi.application'
 #}
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:python2024@127.0.0.1:5432/inmuebles',
+        default='postgresql://inmobiliaria:eIcJy6FsfiSiVYP8SPCzWqf0Do9CLpnu@dpg-ct4birhu0jms73a7k1dg-a.oregon-postgres.render.com/inmuebles_asne',
         conn_max_age=600
     )
 }
