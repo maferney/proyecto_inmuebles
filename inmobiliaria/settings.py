@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nvs^-pb0xjckkq+4g11%j9ujl8+)t)&nsf9u()uuamq32y$f5u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['inmobiliaria-nr3y.onrender.com']
 
 
 # Application definition
