@@ -2,7 +2,7 @@ databases:
   - name: inmueblesdb
     plan: free
     databaseName: inmuebles
-    user: postgres
+    user: inmobiliaria
 
 services:
   - type: web
