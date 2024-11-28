@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Bienvenido, {{ usuario.first_name }} {{ usuario.last_name }} (Arrendatario)</h2>
+    <p>RUT: {{ usuario.rut }}</p>
+    <p>Correo: {{ usuario.email }}</p>
+    <p>Dirección: {{ usuario.direccion }}</p>
+    <p>Teléfono: {{ usuario.telefono }}</p>
+
+    <!-- Solo mostrar el botón si el usuario es un arrendatario -->
+    {% if usuario.tipo_usuario == 'arrendatario' %}
+    <button type="submit" class="volver">
+        <a href="{% url 'ver_inmuebles' %}" class="volver">Ver Inmuebles Disponibles</a>
+    </button>
+    {% endif %}
+</div>
+{% endblock %}

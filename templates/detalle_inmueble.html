@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>{{ inmueble.nombre }}</h2>
+
+    <!-- Mostrar la imagen -->
+    {% if inmueble.imagen %}
+    <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}" class="img-fluid mb-3">
+    {% else %}
+    <img src="https://via.placeholder.com/500" alt="Imagen no disponible" class="img-fluid mb-3">
+    {% endif %}
+
+    <p><strong>Descripción:</strong> {{ inmueble.descripcion }}</p>
+    <p><strong>Precio:</strong> ${{ inmueble.precio }}</p>
+    <p><strong>Metros construidos:</strong> {{ inmueble.m2_construidos }} m²</p>
+    <p><strong>Metros de terreno:</strong> {{ inmueble.m2_terreno }} m²</p>
+    <p><strong>Habitaciones:</strong> {{ inmueble.habitaciones }}</p>
+    <p><strong>Baños:</strong> {{ inmueble.banos }}</p>
+    <p><strong>Estacionamientos:</strong> {{ inmueble.estacionamientos }}</p>
+    <p><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+
+    <button type="submit" class="enviar">
+        <a href="mailto:{{ inmueble.arrendador.email }}" class="volver mt-3">Contactar Vendedor</a>
+    </button>
+</div>
+{% endblock %}

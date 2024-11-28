@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Agregar Nuevo Inmueble</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {% if inmueble.imagen %}
+        <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}" class="img-thumbnail mb-3"
+            style="max-width: 200px;">
+        {% endif %}
+        {{ form.as_p }}
+        <button type="submit" class="volver">Guardar Inmueble</button>
+    </form>
+</div>
+{% endblock %}

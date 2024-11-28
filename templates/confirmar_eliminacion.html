@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Confirmar eliminación</h2>
+    <p>¿Estás seguro de que deseas eliminar el inmueble: {{ inmueble.nombre }}?</p>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="volver">Sí, eliminar</button>
+        <a href="{% url 'mis_inmuebles' %}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+{% endblock %}

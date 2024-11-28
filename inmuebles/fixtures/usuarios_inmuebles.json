@@ -1,0 +1,106 @@
+[
+    {
+        "model": "inmuebles.usuario",
+        "pk": 1,
+        "fields": {
+            "username": "juanperez",
+            "email": "juan@example.com",
+            "tipo_usuario": "arrendador",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "12345678-9",
+            "direccion": "Av. Libertador 1234, Santiago",
+            "telefono": "987654321"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 2,
+        "fields": {
+            "username": "maria",
+            "email": "maria@example.com",
+            "tipo_usuario": "arrendatario",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "23456789-0",
+            "direccion": "Calle del Sol 567, Valparaíso",
+            "telefono": "987654322"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 3,
+        "fields": {
+            "username": "carlos",
+            "email": "carlos@example.com",
+            "tipo_usuario": "arrendador",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "34567890-1",
+            "direccion": "Av. Providencia 2345, Santiago",
+            "telefono": "987654323"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 4,
+        "fields": {
+            "username": "sofia",
+            "email": "sofia@example.com",
+            "tipo_usuario": "arrendatario",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "45678901-2",
+            "direccion": "Calle Los Árboles 678, Viña del Mar",
+            "telefono": "987654324"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 5,
+        "fields": {
+            "username": "pedro",
+            "email": "pedro@example.com",
+            "tipo_usuario": "arrendador",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "56789012-3",
+            "direccion": "Calle 21 de Mayo 789, Concepción",
+            "telefono": "987654325"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 6,
+        "fields": {
+            "username": "ana",
+            "email": "ana@example.com",
+            "tipo_usuario": "arrendatario",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "67890123-4",
+            "direccion": "Av. España 3456, Antofagasta",
+            "telefono": "987654326"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 7,
+        "fields": {
+            "username": "luis",
+            "email": "luis@example.com",
+            "tipo_usuario": "arrendador",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "78901234-5",
+            "direccion": "Calle del Parque 123, Temuco",
+            "telefono": "987654327"
+        }
+    },
+    {
+        "model": "inmuebles.usuario",
+        "pk": 8,
+        "fields": {
+            "username": "laura",
+            "email": "laura@example.com",
+            "tipo_usuario": "arrendatario",
+            "password": "pbkdf2_sha256$260000$randomhashedpassword",
+            "rut": "89012345-6",
+            "direccion": "Calle Maipú 234, Iquique",
+            "telefono": "987654328"
+        }
+    }
+]

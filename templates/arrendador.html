@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Bienvenido, {{ usuario.first_name }} {{ usuario.last_name }} (Arrendador)</h2>
+    <p>RUT: {{ usuario.rut }}</p>
+    <p>Correo: {{ usuario.email }}</p>
+    <p>Dirección: {{ usuario.direccion }}</p>
+    <p>Teléfono: {{ usuario.telefono }}</p>
+
+    <button type="submit" class="enviar">
+        <a class="volver" href="{% url 'agregar_inmueble' %}">Publicar Nuevo Inmueble</a>
+    </button>
+
+    <h3 class="mt-4">Mis Inmuebles Publicados</h3>
+
+    {% if inmuebles %}
+    <div class="row mt-3">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <!-- Verificar si la imagen está disponible antes de mostrarla -->
+                {% if inmueble.imagen %}
+                <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}" class="card-img-top"
+                    style="height: 200px; object-fit: cover;">
+                {% else %}
+                <img src="{% static 'default_image.jpg' %}" alt="Imagen predeterminada" class="card-img-top"
+                    style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text"><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+                    <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                    <p class="card-text"><strong>Precio:</strong> ${{ inmueble.precio }}</p>
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'editar_inmueble' inmueble.id %}" class="volver">Editar</a>
+                    </button>
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'confirmar_eliminacion_inmueble' inmueble.id %}" class="volver">Eliminar</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No has publicado ningún inmueble aún.</p>
+    {% endif %}
+</div>
+{% endblock %}

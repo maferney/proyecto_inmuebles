@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Eliminar Inmueble: {{ inmueble.nombre }}</h2>
+
+    <p>¿Estás seguro de que deseas eliminar este inmueble?</p>
+
+    <div>
+        <strong>Nombre:</strong> {{ inmueble.nombre }} <br>
+        <strong>Descripción:</strong> {{ inmueble.descripcion }} <br>
+        <strong>Precio:</strong> {{ inmueble.precio }} <br>
+        <strong>Dirección:</strong> {{ inmueble.direccion }} <br>
+    </div>
+
+    <!-- Formulario para confirmar la eliminación -->
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger mt-3">Confirmar Eliminación</button>
+    </form>
+
+    <!-- Enlace para cancelar la acción y regresar a la página de "Mis Inmuebles" -->
+    <a href="{% url 'mis_inmuebles' %}" class="btn btn-secondary mt-3">Cancelar</a>
+</div>
+{% endblock %}

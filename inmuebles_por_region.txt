@@ -1,0 +1,20 @@
+Región: 1
+Nombre: Casa 1
+Descripción: Casa con jardín y piscina
+--------------------------------------------------
+Región: 1
+Nombre: Departamento 1
+Descripción: Departamento moderno en el centro
+--------------------------------------------------
+Región: 1
+Nombre: Parcela 1
+Descripción: Parcela en las afueras con vista al mar
+--------------------------------------------------
+Región: 7
+Nombre: Oficina 1
+Descripción: Oficina corporativa en edificio moderno
+--------------------------------------------------
+Región: 2
+Nombre: Bodega 1
+Descripción: Bodega en zona industrial
+--------------------------------------------------

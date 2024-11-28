@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="col-md-6 mx-auto">
+    <h2 class="text-center mb-4">Actualizar Información</h2>
+    <form method="post">
+        {% csrf_token %}
+        
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {{ field }}
+                {% if field.errors %}
+                    <div class="text-danger">{{ field.errors }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <button type="submit" class= "volver w-100">Actualizar</button>
+    </form>
+</div>
+{% endblock %}

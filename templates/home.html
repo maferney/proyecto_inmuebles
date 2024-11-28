@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="titulo">
+    <h1>HabitatPro la mejor Inmobiliaria</h1>
+</div>
+
+<section class="page-section">
+    <div class="container text-center">
+        <div class="row">
+            <!-- Card Misión -->
+            <div class="col-md-4">
+                <div class="card mb-4 h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-container mb-3">
+                            <img src="{% static 'img/mision.png' %}" alt="Icono de Misión" class="card-icon">
+                        </div>
+                        <h3 class="card-title">Misión</h3>
+                        <p class="card-text text-justify">Nos comprometemos a ofrecerte las mejores opciones disponibles, ayudándote
+                            a encontrar la propiedad que mejor se ajuste a tus necesidades. Nuestra misión es brindarte
+                            un servicio de confianza para que encuentres lo que buscas de manera eficiente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Visión -->
+            <div class="col-md-4">
+                <div class="card mb-4 h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-container mb-3">
+                            <img src="{% static 'img/vision.png' %}" alt="Icono de Visión" class="card-icon">
+                        </div>
+                        <h3 class="card-title">Visión</h3>
+                        <p class="card-text text-justify">Aspiramos a ser una empresa líder en el sector, siempre innovando y
+                            ofreciendo soluciones personalizadas que contribuyan al éxito y bienestar de nuestros
+                            clientes. Trabajamos para convertirnos en tu aliado estratégico en todo lo relacionado con
+                            propiedades.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Valores -->
+            <div class="col-md-4">
+                <div class="card mb-4 h-100">
+                    <div class="card-body text-center">
+                        <div class="icon-container mb-3">
+                            <img src="{% static 'img/valores.png' %}" alt="Icono de Valores" class="card-icon">
+                        </div>
+                        <h3 class="card-title">Valores</h3>
+                        <p class="card-text text-justify">Creemos en la honestidad, el respeto y el compromiso como pilares
+                            fundamentales. Nos esforzamos por brindar un servicio confiable, transparente y alineado con
+                            las expectativas de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">Mejores opciones</h2>
+                <p class="lead mb-4">Entra a un mundo de nuevas oportunidades. Explora nuestras soluciones
+                    personalizadas para encontrar lo que mejor se adapta a tus necesidades y estilo de vida, Si estás
+                    listo para conocer todas las opciones que tenemos para ti, no dudes en explorar nuestro catálogo
+                    disponible. ¡Te esperamos con las mejores alternativas!</p>
+
+                <div class="buttons">
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'login' %}" class="volver">Ingresa a tu cuenta</a>
+                    </button>
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'register' %}" class="volver">Regístrate aquí</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

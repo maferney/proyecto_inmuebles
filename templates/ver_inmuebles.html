@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Inmuebles Disponibles</h2>
+
+    <!-- Contenedor para las tarjetas -->
+    <div class="row">
+        {% for inmueble in inmuebles %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <!-- Verificar si la imagen está disponible antes de mostrarla -->
+                {% if inmueble.imagen %}
+                <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}" class="card-img-top"
+                    style="height: 200px; object-fit: cover;">
+                {% else %}
+                <img src="{% static 'default_image.jpg' %}" alt="Imagen predeterminada" class="card-img-top"
+                    style="height: 200px; object-fit: cover;">
+                {% endif %}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ inmueble.nombre }}</h5>
+                    <p class="card-text"><strong>Tipo:</strong> {{ inmueble.tipo_inmueble }}</p>
+                    <p class="card-text"><strong>Dirección:</strong> {{ inmueble.direccion }}</p>
+                    <p class="card-text"><strong>Precio:</strong> ${{ inmueble.precio }}</p>
+
+                    <!-- Botón para ver los detalles -->
+                    <button type="submit" class="enviar">
+                    <a href="{% url 'detalle_inmueble' inmueble.id %}" class="volver">Ver detalles</a>
+                    </button>
+
+                    <!-- Botón para contactar al vendedor -->
+                    <button type="submit" class="enviar">
+                    <a href="mailto:{{ inmueble.arrendador.email }}" class="volver">Contactar al vendedor</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p>No hay inmuebles disponibles.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

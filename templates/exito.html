@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li class="message">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <p>Has actualizado tus datos con éxito</p>
+    {% if tipo_usuario == 'arrendador' %}
+    <button type="submit" class="enviar">
+        <a href="{% url 'arrendador' %}" class="volver">Ir a tu perfil de arrendador</a>
+    </button>
+    {% elif tipo_usuario == 'arrendatario' %}
+    <button type="submit" class="enviar">
+        <a href="{% url 'arrendatario' %}" class="volver">Ir a tu perfil de arrendatario</a>
+    </button>
+    {% else %}
+        <p>Perfil no encontrado</p>
+    {% endif %}
+{% endblock %}

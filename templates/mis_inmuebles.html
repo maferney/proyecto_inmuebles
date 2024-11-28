@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Mis Inmuebles</h2>
+
+    <!-- Mostrar la lista de inmuebles -->
+    {% if inmuebles %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Imagen</th> <!-- Columna para la imagen -->
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for inmueble in inmuebles %}
+            <tr>
+                <td>{{ inmueble.nombre }}</td>
+                <td>{{ inmueble.descripcion }}</td>
+                <td>{{ inmueble.precio }}</td>
+                <td>
+                    {% if inmueble.imagen %}
+                    <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}"
+                        style="width: 100px; height: auto;">
+                    {% else %}
+                    <p>No hay imagen disponible</p>
+                    {% endif %}
+                </td>
+                <td>
+                    <!--Agregar botones para editar o eliminar-->
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'editar_inmueble' inmueble.id %}" class="volver">Editar</a>
+                    </button>
+                    <button type="submit" class="enviar">
+                        <a href="{% url 'confirmar_eliminacion_inmueble' inmueble.id %}" class="volver">Eliminar</a>
+                    </button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No tienes inmuebles creados.</p>
+    {% endif %}
+</div>
+{% endblock %}

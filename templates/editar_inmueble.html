@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Editar Inmueble: {{ inmueble.nombre }}</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <!-- Mostrar vista previa de la imagen actual -->
+        {% if inmueble.imagen %}
+            <img src="{{ inmueble.imagen.url }}" alt="{{ inmueble.nombre }}" class="img-thumbnail mb-3" style="max-width: 200px;">
+        {% endif %}
+        
+        {{ form.as_p }}
+        
+        <button type="submit" class="volver mt-3">Guardar Cambios</button>
+    </form>
+    
+    <a href="{% url 'mis_inmuebles' %}" class="btn btn-secondary mt-3">Volver a Mis Inmuebles</a>
+</div>
+{% endblock %}

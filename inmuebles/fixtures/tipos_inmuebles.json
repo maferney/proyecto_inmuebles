@@ -1,0 +1,102 @@
+[
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 1,
+        "fields": {
+            "nombre": "Casa 1",
+            "descripcion": "Casa con jardín y piscina",
+            "m2_construidos": 120,
+            "m2_terreno": 300,
+            "estacionamientos": 2,
+            "habitaciones": 3,
+            "banos": 2,
+            "direccion": "Calle Ficticia 123",
+            "comuna": 1, 
+            "tipo_inmueble": "casa",
+            "precio": 15000000.00,
+            "arrendador": 1,  
+            "fecha_creacion": "2024-11-01T12:00:00",
+            "ultima_modificacion": "2024-11-01T12:00:00"
+        }
+    },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 2,
+        "fields": {
+            "nombre": "Departamento 1",
+            "descripcion": "Departamento moderno en el centro",
+            "m2_construidos": 80,
+            "m2_terreno": 100,
+            "estacionamientos": 1,
+            "habitaciones": 2,
+            "banos": 1,
+            "direccion": "Av. Ejemplo 456",
+            "comuna": 2,  
+            "tipo_inmueble": "departamento",
+            "precio": 8000000.00,
+            "arrendador": 2,  
+            "fecha_creacion": "2024-11-02T12:00:00",
+            "ultima_modificacion": "2024-11-02T12:00:00"
+        }
+    },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 3,
+        "fields": {
+            "nombre": "Parcela 1",
+            "descripcion": "Parcela en las afueras con vista al mar",
+            "m2_construidos": 50,
+            "m2_terreno": 1000,
+            "estacionamientos": 3,
+            "habitaciones": 1,
+            "banos": 1,
+            "direccion": "Ruta 5 Sur, km 100",
+            "comuna": 3,  
+            "tipo_inmueble": "parcela",
+            "precio": 25000000.00,
+            "arrendador": 3,  
+            "fecha_creacion": "2024-11-03T12:00:00",
+            "ultima_modificacion": "2024-11-03T12:00:00"
+        }
+    },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 4,
+        "fields": {
+            "nombre": "Oficina 1",
+            "descripcion": "Oficina corporativa en edificio moderno",
+            "m2_construidos": 100,
+            "m2_terreno": 150,
+            "estacionamientos": 2,
+            "habitaciones": 0,
+            "banos": 1,
+            "direccion": "Av. Providencia 789",
+            "comuna": 76,  
+            "tipo_inmueble": "oficina",
+            "precio": 30000000.00,
+            "arrendador": 4,  
+            "fecha_creacion": "2024-11-04T12:00:00",
+            "ultima_modificacion": "2024-11-04T12:00:00"
+        }
+    },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 5,
+        "fields": {
+            "nombre": "Bodega 1",
+            "descripcion": "Bodega en zona industrial",
+            "m2_construidos": 500,
+            "m2_terreno": 800,
+            "estacionamientos": 0,
+            "habitaciones": 0,
+            "banos": 1,
+            "direccion": "Calle Industrial 1000",
+            "comuna": 5,  
+            "tipo_inmueble": "bodega",
+            "precio": 10000000.00,
+            "arrendador": 5, 
+            "fecha_creacion": "2024-11-05T12:00:00",
+            "ultima_modificacion": "2024-11-05T12:00:00"
+        }
+    }
+]
